@@ -32,6 +32,14 @@ body {
     position: sticky;
     top: 0;
 }   
+.navbar a {
+    transition: 0.2s;
+}
+
+.navbar a: hover {
+    border-bottom: 2px solid #4da3ff;
+    opacity: 0.8;
+}
 
 .navbar .container {
     display: flex;
