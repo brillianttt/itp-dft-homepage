@@ -211,11 +211,16 @@ footer {
 
 /* Image */
 .gallery-item img {
-    width: 100%;
+    width: 50%;
     height: 50px;
     object-fit: cover;
     display: block;
 }   
+
+    .img-small {
+    width: 20%;
+    height: auto;
+}
    
       
 
