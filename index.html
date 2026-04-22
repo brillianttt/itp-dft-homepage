@@ -7,6 +7,26 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 
+    <div class="floating-gallery">
+    <img src="./images/Haldane.jpg" class="slide active">
+    <img src="./images/2026-CW-PRB.jpg" class="slide">
+    <img src="./images/2025-TR35.jpg" class="slide">
+    <img src="./images/2024-AAPPS.jpg" class="slide">
+</div>
+
+    <script>
+let index = 0;
+const slides = document.querySelectorAll(".floating-gallery img");
+
+function showNext() {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}
+
+setInterval(showNext, 3000); // 每3秒切换
+</script>
+
 <body>
 
 <header class="navbar">
