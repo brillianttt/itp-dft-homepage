@@ -148,70 +148,11 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Gallery layout */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
 
-/* Card style */
-.gallery-item {
-    background: rgba(0,0,0,0.04);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-
-.gallery-item {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    will-change: transform;
-}
-
-/* 更明显的“漂浮感” */
-.gallery-item:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
-}
-
-/* Text section */
-.gallery-text {
-    padding: 15px 15px 5px 15px;
-}
-
-.gallery-text .date {
-    display: inline-block;
-    font-size: 20px;
-    color: #0b1f3a;
-    font-weight: bold;
-    margin-bottom: 6px;
-}
-
-.gallery-text p {
-    margin: 5px 0 10px;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.4;
-}
-
-.gallery-text a {
-    color: #4da3ff;
-    text-decoration: none;
-}
-
-.gallery-text a: hover {
-    text-decoration: underline;
-}
 
 /* Image */
 .gallery-item img {
-    width: 50%;
+    width: 20%;
     height: 50px;
     object-fit: cover;
     display: block;
