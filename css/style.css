@@ -322,3 +322,33 @@ h2, h3 {
     max-width: 1100px;
     margin: 20px auto 10px auto;
 }
+
+
+    /* ===== Floating gallery container ===== */
+.floating-gallery {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 180px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 999;
+    background: white;
+}
+
+/* ===== Slides ===== */
+.floating-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+/* active image */
+.floating-gallery img.active {
+    opacity: 1;
+}
