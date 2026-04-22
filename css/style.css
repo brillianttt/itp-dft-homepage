@@ -1,3 +1,23 @@
+/* Back to home button */
+.back-home {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #0b1f3a;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    z-index: 999;
+    transition: 0.2s;
+}
+
+.back-home:hover {
+    background: #1c3f6e;
+    transform: translateY(-2px);
+}
+
 /* 全局 */
 @media (max-width: 768px) {
     .navbar .container {
