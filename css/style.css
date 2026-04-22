@@ -185,8 +185,8 @@ footer {
 }
 
 .logo-area img-small {
-    width: 3px;
-    height: auto;
+    width: 3px !important;
+    height: auto !important;
     border: 1px solid #eee;
     border-radius: 4px;
     float: left;
