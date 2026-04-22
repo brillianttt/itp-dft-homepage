@@ -1,4 +1,16 @@
 /* 全局 */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 5px 10px 5px 0;
+        display: inline-block;
+    }
+}
+
 body {
     margin: 0;
     font-family: "Helvetica Neue", Arial;
