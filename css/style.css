@@ -169,12 +169,7 @@ footer {
     border-radius: 8px;
     padding: 4px;
     
-        img.img-small {
-    width: 50px !important;
-    height: auto !important;
-    border: 1px solid #eee;
-    border-radius: 6px;
-}
+
 }
    .logo-area {
     display: flex;
@@ -237,11 +232,6 @@ footer {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.highlight img {
-    width: 200px;
-    object-fit: cover;
-    border-radius: 6px;
-}
 
 .highlight-text a {
     color: #4da3ff;
@@ -252,3 +242,9 @@ footer {
     text-decoration: underline;
 }
 
+        img.img-small {
+    width: 20px !important;
+    height: auto !important;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
