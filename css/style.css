@@ -39,7 +39,7 @@ body {
 }   
 /* Hero */
 .hero {
-    background: url('../images/ITP-DFT.png') center/cover;
+    background: url('./images/ITP-DFT.png') center/cover;
     height: 300px;
     display: flex;
     align-items: center;
