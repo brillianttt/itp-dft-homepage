@@ -178,16 +178,18 @@ footer {
 }
 
 .logo-area img {
-    width: 5px;
+    width: 3px;
     height: auto;
     object-fit: contain;
+    float: left;
 }
 
 .logo-area img-small {
-    width: 5px !important;
-    height: auto !important;
+    width: 3px;
+    height: auto;
     border: 1px solid #eee;
-    border-radius: 6px;
+    border-radius: 4px;
+    float: left;
 }
 
 
