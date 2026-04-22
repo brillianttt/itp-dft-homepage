@@ -183,9 +183,72 @@ footer {
 }
 
 .logo-area img {
-    width: 40px;
-    height: 40px;
+    width: 10px;
+    height: auto;
     object-fit: contain;
 }
-      
+
+
+    /* page title */
+.page-title {
+    margin-top: 30px;
+}
+
+/* section blocks */
+.research-block {
+    margin: 40px 0;
+}
+
+/* topic grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* research card */
+.research-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.2s;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+}
+
+.research-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* highlight section */
+.highlight {
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.highlight img {
+    width: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.highlight-text a {
+    color: #4da3ff;
+    text-decoration: none;
+}
+
+.highlight-text a:hover {
+    text-decoration: underline;
+}
 
