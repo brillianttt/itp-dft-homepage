@@ -116,6 +116,8 @@ h2 {
     color: #0b1f3a;
     font-weight: bold;
     margin-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* 表格 */
@@ -141,9 +143,11 @@ td, th {
 
 /* footer */
 footer {
+    
     background: #0b1f3a;
     color: white;
-    margin-top: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 0.9rem;
 }
@@ -156,11 +160,15 @@ footer {
     height: 50px;
     object-fit: cover;
     display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }   
 
     .img-small {
     width: 10%;
     height: auto;
+        margin-top: 20px;
+    margin-bottom: 20px;
 }
    
       
