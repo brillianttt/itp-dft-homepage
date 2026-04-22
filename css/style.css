@@ -40,7 +40,8 @@ body {
 
 /* Hero */
 .hero {
-    background: url('../images/banner.jpg') center/cover;
+    background: url('../images/ITP-DFT.png') center/cover;
+    opacity: 0.3;
     height: 300px;
     display: flex;
     align-items: center;
