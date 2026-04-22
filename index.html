@@ -7,20 +7,7 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 
-   
 
-    <script>
-let index = 0;
-const slides = document.querySelectorAll(".floating-gallery img");
-
-function showNext() {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-}
-
-setInterval(showNext, 3000); // 每3秒切换
-</script>
 
     
 
@@ -81,6 +68,23 @@ setInterval(showNext, 3000); // 每3秒切换
 </section>
 
 </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    let index = 0;
+    const slides = document.querySelectorAll(".floating-gallery img");
+
+    function showNext() {
+        slides[index].classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    setInterval(showNext, 3000);
+
+});
+</script>
 
 <footer>
 <p>&nbsp;&nbsp;© 2026 Zhang's Group | ITP-DFT | Email: ttzhang@itp.ac.cn
