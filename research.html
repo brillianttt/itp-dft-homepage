@@ -34,17 +34,17 @@
 <!-- ================= MAIN ================= -->
 <div class="container">
 
-<!-- TITLE -->
+<!-- ================= TITLE ================= -->
 <section class="page-title">
     <h2>Research</h2>
 </section>
 
 <!-- ================= OVERVIEW ================= -->
-<section class="research-block">
+<section class="card">
 
     <h3>Overview</h3>
 
-    <p style="max-width:800px;">
+    <p style="max-width:850px;">
         We explore theoretical condensed matter physics and first-principles simulations.
         Our research focuses on quantum geometric effects in quasiparticle systems,
         band topology, and thermoelectric transport in quantum materials.
@@ -52,69 +52,76 @@
 
 </section>
 
-<!-- ================= RESEARCH AREAS ================= -->
-<section class="research-block">
+<!-- ================= RESEARCH DIRECTIONS (HORIZONTAL) ================= -->
+<section class="card">
 
     <h3>Research Directions</h3>
 
-    <div class="research-grid">
+    <div style="
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+        margin-top:20px;
+    ">
 
-        <div class="research-card">
+        <!-- DFT -->
+        <div class="research-card" style="flex:1; min-width:220px;">
             <img src="./images/topic-dft.jpg">
             <h4>First-Principles Theory</h4>
-            <p>
-                Density functional theory and ab initio modeling of quantum materials.
-            </p>
+            <p>Density functional theory and ab initio modeling of quantum materials.</p>
         </div>
 
-        <div class="research-card">
+        <!-- Topology -->
+        <div class="research-card" style="flex:1; min-width:220px;">
             <img src="./images/topic-topology.jpg">
-            <h4>Topological Quantum Matter</h4>
-            <p>
-                Topological phases, Dirac/Weyl fermions, and band geometry.
-            </p>
+            <h4>Topological Matter</h4>
+            <p>Dirac/Weyl fermions, band topology, and topological phases.</p>
         </div>
 
-        <div class="research-card">
+        <!-- Quantum Geometry -->
+        <div class="research-card" style="flex:1; min-width:220px;">
             <img src="./images/topic-geometry.jpg">
             <h4>Quantum Geometry</h4>
-            <p>
-                Berry curvature, quantum metric, and geometric responses.
-            </p>
+            <p>Berry curvature, quantum metric, and geometric response theory.</p>
         </div>
 
-        <div class="research-card">
+        <!-- Thermoelectric -->
+        <div class="research-card" style="flex:1; min-width:220px;">
             <img src="./images/topic-thermo.jpg">
-            <h4>Thermoelectric Transport</h4>
-            <p>
-                Electronic transport and thermal response in correlated materials.
-            </p>
+            <h4>Transport Physics</h4>
+            <p>Thermoelectricity, conductivity, and quantum transport phenomena.</p>
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= HIGHLIGHT ================= -->
-<section class="research-block">
+<!-- ================= FEATURED PAPER ================= -->
+<section class="card">
 
     <h3>Recent Highlight</h3>
 
-    <div class="highlight">
+    <div style="display:flex; gap:20px; align-items:center;">
 
-        <img src="./images/2026-CW-PRB.jpg" style="width:220px; border-radius:4px;">
+        <img src="./images/2026-CW-PRB.jpg"
+             style="width:240px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
 
-        <div class="highlight-text">
+        <div>
 
-            <p>
-                <b>Quantum geometric origin of anomalous transport in correlated systems.</b><br><br>
+            <p style="font-weight:500; font-size:16px;">
+                Quantum geometric origin of anomalous transport in correlated systems
+            </p>
 
-                Published in <i>Physical Review B (2026)</i>.
+            <p style="color:#555;">
+                <i>Physical Review B</i> (2026)
+            </p>
+
+            <p style="color:#666; font-size:14px; max-width:600px;">
                 This work reveals how quantum geometry governs transport responses
                 beyond conventional semiclassical theory.
             </p>
 
-            <a href="https://doi.org/10.1103/hckh-kxx5" target="_blank">
+            <a href="https://doi.org/10.1103/hckh-kxx5">
                 View Publication →
             </a>
 
@@ -124,13 +131,13 @@
 
 </section>
 
-<!-- ================= FUTURE WORK ================= -->
-<section class="research-block">
+<!-- ================= FUTURE ================= -->
+<section class="card">
 
     <h3>Future Directions</h3>
 
-    <p style="max-width:800px;">
-        We are currently extending our framework to non-equilibrium quantum dynamics,
+    <p style="max-width:850px;">
+        We are extending our framework to non-equilibrium quantum dynamics,
         strongly correlated systems, and light-induced topological phases.
     </p>
 
