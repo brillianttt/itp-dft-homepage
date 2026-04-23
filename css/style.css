@@ -260,7 +260,7 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
-
+https://brillianttt.github.io/itp-dft-homepage/index.html
     .news-section {
         flex-direction: column;
     }
@@ -275,7 +275,10 @@ footer {
 }
 
 h3 {
-    color: #1f3a5f;
+    color: #e2a8a1;
     font-weight: 600;
-    letter-spacing: 0.3px;
+    font-size: 21px;
+    letter-spacing: 0.5px;
+
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
