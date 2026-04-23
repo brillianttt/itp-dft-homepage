@@ -344,17 +344,15 @@ h2, h3 {
     width: 100%;
     height: 180px;
     overflow: hidden;
-    border-radius: 10px;
 }
 
-/* 图片切换 */
 .floating-gallery img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity 1s ease;
 }
 
 .floating-gallery img.active {
