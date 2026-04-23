@@ -1,334 +1,111 @@
-/* Back to home button */
-.back-home {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background: #0b1f3a;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 14px;
-    z-index: 999;
-    transition: 0.2s;
-}
-
-.back-home:hover {
-    background: #1c3f6e;
-    transform: translateY(-2px);
-}
-
-/* 全局 */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav a {
-        margin: 5px 10px 5px 0;
-        display: inline-block;
-    }
-}
+/* =========================
+   GLOBAL (Nature style)
+========================= */
 
 body {
     margin: 0;
-    font-family: "Helvetica Neue", Arial;
-    line-height: 1.6;
-    background: #f5f7fa;
-    color: #222;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.7;
+    font-size: 15px;
 }
-    
-/* 容器 */
+
+/* layout container */
 .container {
     width: 85%;
+    max-width: 1100px;
     margin: auto;
 }
 
-/* 导航栏 */
+/* =========================
+   NAVBAR (minimal Nature style)
+========================= */
+
 .navbar {
-    background: #0b1f3a;
-    color: white;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
     position: sticky;
     top: 0;
-}   
-.navbar a {
-    transition: 0.2s;
-}
-
-.navbar a:hover {
-    border-bottom: 2px solid #4da3ff;
-    opacity: 0.8;
+    z-index: 1000;
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 14px 0;
+}
+
+.navbar h1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
 }
 
 .navbar a {
-    color: white;
-    margin-left: 20px;
+    color: #333;
     text-decoration: none;
+    margin-left: 18px;
     font-size: 14px;
+    transition: color 0.2s ease;
 }
-    
+
 .navbar a:hover {
-    border-bottom: 2px solid #4da3ff;
-}   
-/* Hero */
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+/* =========================
+   HERO (Nature journal style)
+========================= */
+
 .hero {
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-}
-
-.hero-text {
-    background: rgba(0,0,0,0.1);
-    padding: 20px 40px;
+    padding: 60px 0 20px 0;
     text-align: center;
-        color: black;
-
 }
 
+.hero h2 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 15px;
+    color: #555;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* description block */
 .description {
-    padding: 20px 40px;
-    text-align: left;
-    width: 50%;
-    color: black;
+    max-width: 750px;
+    margin: 20px auto;
+    color: #444;
+    font-size: 15px;
+    text-align: center;
 }
 
-/* section */
+/* =========================
+   SECTION STYLE
+========================= */
 
 section {
-    width: 85%;
-    margin: 40px auto;
+    margin: 50px auto;
 }
-
 
 h2 {
-    margin: 20px 0 10px 0;
-    padding-left: 0;
-    border-left: 4px solid #0b1f3a;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    border-left: 3px solid #000;
+    padding-left: 10px;
 }
 
-/* news */
-.news span {
-    color: #0b1f3a;
-    font-weight: bold;
-    margin-right: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.news .date {
-    font-weight: bold;
-    color: #0b1f3a;
-    margin-right: 10px;
-}
-
-/* 表格 */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th {
-    background: #0b1f3a;
-    color: white;
-}
-
-td, th {
-    padding: 10px;
-}
-
-/* footer */
-footer {
-    
-    background: #0b1f3a;
-    color: white;
-    margin-top: 100px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-
-
-/* Image */
-.gallery-item img {
-    width: 20%;
-    height: 10px;
-    object-fit: cover;
-    display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}   
-
-    .img-border {
-    border: 2px solid #0b1f3a;
-    border-radius: 8px;
-    padding: 4px;
-    
-
-}
-   .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-
-.logo-area img-small {
-    width: 3px !important;
-    height: auto !important;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    float: left;
-}
-
-
-
-    /* page title */
-.page-title {
-    margin-top: 30px;
-}
-
-/* section blocks */
-.research-block {
-    margin: 40px 0;
-}
-
-/* topic grid */
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-/* research card */
-.research-card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: 0.2s;
-}
-
-.research-card:hover {
-    transform: translateY(-5px);
-}
-
-.research-card img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-/* highlight section */
-.highlight {
-    display: flex;
-    gap: 20px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-
-.highlight-text a {
-    color: #4da3ff;
-    text-decoration: none;
-}
-
-.highlight-text a:hover {
-    text-decoration: underline;
-}
-
-        img.img-small {
-    width: 5px !important;
-    height: auto !important;
-    border: 1px solid #eee;
-    border-radius: 6px;
-}
-
-    /* ===== Page background (match homepage style) ===== */
-body {
-    background: #f5f7fa;
-}
-
-/* ===== Member table container ===== */
-.member-table {
-    width: 100%;
-    max-width: 1100px;     /* ⭐ 表格加宽关键 */
-    margin: 20px auto 50px auto;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* ===== Header ===== */
-.member-table th {
-    background: #0b1f3a;
-    color: white;
-    padding: 12px;
-    text-align: left;
-    font-weight: normal;
-}
-
-/* ===== Cells ===== */
-.member-table td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-/* ===== Hover effect ===== */
-.member-table tr:hover {
-    background: #f0f6ff;
-}
-
-/* ===== Column width control ===== */
-.member-table th:nth-child(1),
-.member-table td:nth-child(1) {
-    width: 20%;
-}
-
-.member-table th:nth-child(2),
-.member-table td:nth-child(2) {
-    width: 25%;
-}
-
-.member-table th:nth-child(3),
-.member-table td:nth-child(3) {
-    width: 25%;
-}
-
-.member-table th:nth-child(4),
-.member-table td:nth-child(4) {
-    width: 30%;
-}
-
-/* ===== Section spacing ===== */
-h2, h3 {
-    max-width: 1100px;
-    margin: 20px auto 10px auto;
-}
-
-
-    /* ===== Floating gallery container ===== */
+/* =========================
+   NEWS SECTION
+========================= */
 
 .news-section {
     display: flex;
@@ -344,12 +121,34 @@ h2, h3 {
     flex: 1;
 }
 
-/* gallery 变成普通布局元素（不是 fixed） */
+/* news list */
+.news {
+    list-style: none;
+    padding: 0;
+}
+
+.news li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.news span {
+    font-weight: 600;
+    margin-right: 8px;
+    color: #000;
+}
+
+/* =========================
+   IMAGE SLIDER (clean Nature style)
+========================= */
+
 .floating-gallery {
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 220px;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .floating-gallery img {
@@ -358,9 +157,95 @@ h2, h3 {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease-in-out;
 }
 
 .floating-gallery img.active {
     opacity: 1;
+}
+
+/* =========================
+   ACCESS SECTION
+========================= */
+
+.access-section p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* =========================
+   TABLE (minimal academic style)
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+th {
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+td {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* =========================
+   FOOTER (Nature style)
+========================= */
+
+footer {
+    margin-top: 80px;
+    padding: 25px 0;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    background: #fff;
+}
+
+/* =========================
+   LOGO AREA
+========================= */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    height: 40px;
+    width: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .news-section {
+        flex-direction: column;
+    }
+
+    .description {
+        width: 90%;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        margin-right: 12px;
+    }
 }
