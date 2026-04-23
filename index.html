@@ -86,10 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
 </footer>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function () {
 
     let index = 0;
-    const slides = document.querySelectorAll(".floating-gallery img");
+    const slides = document.querySelectorAll(".news-right .floating-gallery img");
 
     function showNext() {
         slides[index].classList.remove("active");
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     setInterval(showNext, 2000);
-});
+};
 </script>
 
 </body>
