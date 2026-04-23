@@ -124,6 +124,12 @@ h2 {
     margin-bottom: 50px;
 }
 
+.news .date {
+    font-weight: bold;
+    color: #0b1f3a;
+    margin-right: 10px;
+}
+
 /* 表格 */
 table {
     width: 100%;
