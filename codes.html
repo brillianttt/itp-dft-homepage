@@ -1,34 +1,152 @@
-<a class="back-home" href="index.html">← Home</a>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
-<title>Research | Zhang's Group</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codes | Zhang's Group</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
     <div class="container">
-        <h1>Zhang's Group</h1>
+
+        <div class="logo-area">
+            <h1>Zhang's Group</h1>
+        </div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="members.html">Members</a>
-            <a href="research.html" class="active">Research</a>
+            <a href="research.html">Research</a>
             <a href="publications.html">Publications</a>
             <a href="codes.html">Codes</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
         </nav>
+
     </div>
 </header>
 
+<!-- ================= MAIN ================= -->
 <div class="container">
 
-    
-<h2>Codes</h2>
-<ul>
-    <li><a href="#">DFT Code 1</a></li>
-    <li><a href="#">Simulation Tool</a></li>
-</ul>
+<h2>Codes & Computational Tools</h2>
+
+<!-- ================= INTRO ================= -->
+<section class="card">
+
+    <p>
+        We develop numerical and first-principles tools for quantum materials,
+        focusing on Berry curvature, transport properties, and electronic structure calculations.
+    </p>
+
+</section>
+
+<!-- ================= CODE CARDS ================= -->
+<section class="card">
+
+<div style="display:flex; flex-direction:column; gap:20px; margin-top:20px;">
+
+    <!-- ================= CODE 1 ================= -->
+    <div class="card" style="display:flex; gap:20px; align-items:flex-start;">
+
+        <img src="./images/code-dft.jpg"
+             style="width:180px; border-radius:6px;">
+
+        <div>
+
+            <h3>Quantum DFT Package</h3>
+
+            <p style="color:#555;">
+                A first-principles electronic structure package for correlated quantum materials.
+            </p>
+
+            <p style="font-size:14px; color:#666;">
+                <b>Problem:</b> Accurate band structure and orbital-resolved analysis in complex materials.<br>
+                <b>Method:</b> Density functional theory with symmetry-adapted basis expansion.
+            </p>
+
+            <p style="font-size:13px;">
+                📄 Related work:
+                <a href="https://doi.org/10.1103/hckh-kxx5" target="_blank">
+                    Phys. Rev. B (2026)
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CODE 2 ================= -->
+    <div class="card" style="display:flex; gap:20px; align-items:flex-start;">
+
+        <img src="./images/code-transport.jpg"
+             style="width:180px; border-radius:6px;">
+
+        <div>
+
+            <h3>Quantum Transport Solver</h3>
+
+            <p style="color:#555;">
+                Numerical solver for Berry-curvature-driven transport phenomena.
+            </p>
+
+            <p style="font-size:14px; color:#666;">
+                <b>Problem:</b> Anomalous Hall and thermoelectric responses beyond semiclassical theory.<br>
+                <b>Method:</b> Kubo formula + quantum geometric tensor formalism.
+            </p>
+
+            <p style="font-size:13px;">
+                📄 Related work:
+                <a href="#">PRB / PRL (in preparation)</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CODE 3 ================= -->
+    <div class="card" style="display:flex; gap:20px; align-items:flex-start;">
+
+        <img src="./images/code-berry.jpg"
+             style="width:180px; border-radius:6px;">
+
+        <div>
+
+            <h3>Berry Curvature Toolkit</h3>
+
+            <p style="color:#555;">
+                A computational toolkit for quantum geometry and topological invariants.
+            </p>
+
+            <p style="font-size:14px; color:#666;">
+                <b>Problem:</b> Efficient evaluation of Berry curvature and quantum metric.<br>
+                <b>Method:</b> Wannier interpolation + Brillouin zone sampling optimization.
+            </p>
+
+            <p style="font-size:13px;">
+                📄 Related work:
+                <a href="#">Topology & Geometry in Condensed Matter</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Zhang's Group | ITP-DFT</p>
+</footer>
+
+</body>
+</html>
