@@ -1,11 +1,11 @@
 /* =========================
-   GLOBAL (Nature style)
+   GLOBAL (Nature + UI Depth Layer)
 ========================= */
 
 body {
     margin: 0;
     font-family: "Helvetica Neue", Arial, sans-serif;
-    background: #ffffff;
+    background: #f4f6f9;   /* 关键：不再纯白 */
     color: #1a1a1a;
     line-height: 1.7;
     font-size: 15px;
@@ -19,15 +19,17 @@ body {
 }
 
 /* =========================
-   NAVBAR (minimal Nature style)
+   NAVBAR (Deep Blue Academic Style)
 ========================= */
 
 .navbar {
-    background: #ffffff;
-    border-bottom: 1px solid #eaeaea;
+    background: #0b1f3a;   /* 墨蓝核心 */
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
 
 .navbar .container {
@@ -41,28 +43,48 @@ body {
     font-size: 18px;
     font-weight: 500;
     margin: 0;
+    color: white;
 }
 
 .navbar a {
-    color: #333;
+    color: white;
+    margin-left: 16px;
     text-decoration: none;
-    margin-left: 18px;
     font-size: 14px;
-    transition: color 0.2s ease;
+    opacity: 0.85;
+    transition: all 0.2s ease;
 }
 
 .navbar a:hover {
-    color: #000;
-    border-bottom: 1px solid #000;
+    opacity: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+}
+
+/* logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    height: 40px;
+    width: auto;
 }
 
 /* =========================
-   HERO (Nature journal style)
+   HERO (soft card layer)
 ========================= */
 
 .hero {
-    padding: 60px 0 20px 0;
+    margin-top: 30px;
+    padding: 50px 20px;
     text-align: center;
+
+    background: linear-gradient(135deg, #f8fafc, #eef3f8);
+    border-radius: 12px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 .hero h2 {
@@ -74,33 +96,49 @@ body {
 .hero p {
     font-size: 15px;
     color: #555;
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
 }
 
-/* description block */
 .description {
     max-width: 750px;
     margin: 20px auto;
     color: #444;
-    font-size: 15px;
     text-align: center;
 }
 
 /* =========================
-   SECTION STYLE
+   SECTION BASE STYLE
 ========================= */
 
 section {
-    margin: 50px auto;
+    margin: 40px auto;
 }
 
 h2 {
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 15px;
-    border-left: 3px solid #000;
+    border-left: 3px solid #0b1f3a;
     padding-left: 10px;
+}
+
+/* =========================
+   CARD SYSTEM (核心 UI depth)
+========================= */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
 }
 
 /* =========================
@@ -136,19 +174,19 @@ h2 {
 .news span {
     font-weight: 600;
     margin-right: 8px;
-    color: #000;
+    color: #0b1f3a;
 }
 
 /* =========================
-   IMAGE SLIDER (clean Nature style)
+   IMAGE SLIDER
 ========================= */
 
 .floating-gallery {
     position: relative;
-    width: 100%;
     height: 220px;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .floating-gallery img {
@@ -174,7 +212,7 @@ h2 {
 }
 
 /* =========================
-   TABLE (minimal academic style)
+   TABLE (academic clean)
 ========================= */
 
 table {
@@ -197,32 +235,19 @@ td {
 }
 
 /* =========================
-   FOOTER (Nature style)
+   FOOTER (soft depth)
 ========================= */
 
 footer {
     margin-top: 80px;
     padding: 25px 0;
-    border-top: 1px solid #eaeaea;
     text-align: center;
+
     font-size: 13px;
     color: #666;
-    background: #fff;
-}
 
-/* =========================
-   LOGO AREA
-========================= */
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-area img {
-    height: 40px;
-    width: auto;
+    background: #ffffff;
+    border-top: 1px solid #eaeaea;
 }
 
 /* =========================
@@ -240,12 +265,11 @@ footer {
         flex-direction: column;
     }
 
-    .description {
-        width: 90%;
+    .hero {
+        padding: 30px 15px;
     }
 
-    .navbar a {
-        margin-left: 0;
-        margin-right: 12px;
+    .container {
+        width: 92%;
     }
 }
