@@ -273,3 +273,9 @@ footer {
         width: 92%;
     }
 }
+
+h3 {
+    color: #1f3a5f;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
