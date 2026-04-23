@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITP-DFT | Zhang's Group</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITP-DFT | Zhang's Group</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR (DARK BLUE) ================= -->
 <header class="navbar">
     <div class="container">
 
@@ -35,49 +33,48 @@
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
+<section class="hero hero-card">
     <h2>Condensed Matter Theory & DFT Research Group</h2>
     <p>Institute of Theoretical Physics, Chinese Academy of Sciences</p>
 
     <p class="description">
-        We are a research group focused on theoretical condensed matter physics and first-principles calculations.
-        Our work centers on quantum geometric phenomena in quasiparticle systems and thermoelectric properties in solids.
+        We study quantum geometric phenomena, topological phases,
+        and transport properties in quantum materials using first-principles methods.
     </p>
 </section>
 
 <!-- ================= MAIN ================= -->
 <div class="container">
 
-    <section class="news-section">
+    <!-- NEWS + SLIDER CARD -->
+    <section class="card news-section">
 
-        <!-- News -->
         <div class="news-left">
             <h2>News</h2>
 
             <ul class="news">
-                <li><span>2026/04/07</span> Paper accepted in PRB (Editor's Suggestion)</li>
+                <li><span>2026/04/07</span> PRB paper accepted (Editor's Suggestion)</li>
                 <li><span>2023/01/03</span> Zhang's Lab officially launched</li>
             </ul>
         </div>
 
-        <!-- Image Slider -->
         <div class="news-right">
             <div class="floating-gallery">
-                <img src="./images/Haldane.jpg" class="active" alt="slide1">
-                <img src="./images/2026-CW-PRB.jpg" alt="slide2">
-                <img src="./images/2025-TR35.jpg" alt="slide3">
-                <img src="./images/2024-AAPPS.jpg" alt="slide4">
+                <img src="./images/Haldane.jpg" class="active">
+                <img src="./images/2026-CW-PRB.jpg">
+                <img src="./images/2025-TR35.jpg">
+                <img src="./images/2024-AAPPS.jpg">
             </div>
         </div>
 
     </section>
 
-    <!-- ================= ACCESS ================= -->
-    <section class="access-section">
+    <!-- ACCESS CARD -->
+    <section class="card access-section">
         <h2>Access</h2>
         <p>
             Institute of Theoretical Physics, CAS<br>
-            No. 55 Zhong Guan Cun East Road, Haidian District, Beijing 100190, China
+            No. 55 Zhong Guan Cun East Road, Beijing 100190, China
         </p>
     </section>
 
@@ -91,7 +88,6 @@
 <!-- ================= SLIDER JS ================= -->
 <script>
 window.onload = function () {
-
     let index = 0;
     const slides = document.querySelectorAll(".floating-gallery img");
 
