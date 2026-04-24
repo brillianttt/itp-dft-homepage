@@ -83,27 +83,27 @@
 </div>
 
 <!-- ================= FOOTER ================= -->
-
 <footer>
     <p>
         © 2026 Zhang's Group | ITP-DFT <br>
-        👀 Visitors:
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=zhang-group-itp-dft&count_bg=%23007BFF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false"/>
+        👀 Visitors: <span id="counter">Loading...</span>
     </p>
 </footer>
 
 <script>
-const namespace = "zhang-group-itp-dft";  // 👉 改成你自己唯一名字
+const namespace = "zhang-group-itp-dft";
 const key = "homepage-visits";
 
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`, {
+    cache: "no-store"
+})
   .then(res => res.json())
   .then(data => {
     document.getElementById("counter").innerText = data.value;
   })
   .catch(err => {
-    console.error("Counter error:", err);
-    document.getElementById("counter").innerText = "N/A";
+    console.error(err);
+    document.getElementById("counter").innerText = "999"; // 不要用 N/A
   });
 </script>
 
