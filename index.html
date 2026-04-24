@@ -86,10 +86,44 @@
 <footer>
     <p>
         © 2026 Zhang's Group | ITP-DFT <br>
-        👀 Visitors:
-        <img src="https://img.shields.io/badge/dynamic/json?url=https://api.countapi.xyz/get/zhang-group-itp-dft/homepage-visits&query=value&label=Visitors&color=003366"/>
+        👀 Visitors: <span id="counter">Loading...</span>
     </p>
 </footer>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getDatabase, ref, get, set, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+// 🔥 改成你的 config
+const firebaseConfig = {
+  apiKey: "AIzaSyCgiCiyaDtdBIwaA-2-tNTFTRt6l56_tgw",
+  authDomain: "zhang-group-visitor.firebaseapp.com",
+  databaseURL: "https://zhang-group-visitor-default-rtdb.firebaseio.com",
+  projectId: "zhang-group-visitor",
+  storageBucket: "zhang-group-visitor.firebasestorage.app",
+  messagingSenderId: "509505890732",
+  appId: "1:509505890732:web:c3009a1a05026634293209",
+  measurementId: "G-H4J5DX402Z"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const counterRef = ref(db, "visits");
+
+get(counterRef).then(snapshot => {
+    let count = snapshot.val();
+
+    if (count === null) {
+        set(counterRef, 1);
+        document.getElementById("counter").innerText = 1;
+    } else {
+        update(counterRef, count + 1);
+        document.getElementById("counter").innerText = count + 1;
+    }
+});
+</script>
 
 <!-- ================= SLIDER JS ================= -->
 <script>
