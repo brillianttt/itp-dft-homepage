@@ -84,15 +84,27 @@
 
 <!-- ================= FOOTER ================= -->
 
-    <footer>
+<footer>
     <p>
         © 2026 Zhang's Group | ITP-DFT <br>
-        👀 Visitors: <span id="busuanzi_container_site_uv">
-    <span id="busuanzi_value_site_uv"></span>
-</span>
+        👀 Visitors: <span id="counter">Loading...</span>
     </p>
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </footer>
+
+<script>
+const namespace = "zhang-group-itp-dft";  // 👉 改成你自己唯一名字
+const key = "homepage-visits";
+
+fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("counter").innerText = data.value;
+  })
+  .catch(err => {
+    console.error("Counter error:", err);
+    document.getElementById("counter").innerText = "N/A";
+  });
+</script>
 
 <!-- ================= SLIDER JS ================= -->
 <script>
