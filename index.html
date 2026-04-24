@@ -86,26 +86,10 @@
 <footer>
     <p>
         © 2026 Zhang's Group | ITP-DFT <br>
-        👀 Visitors: <span id="counter">Loading...</span>
+        👀 Visitors:
+        <img src="https://img.shields.io/badge/dynamic/json?url=https://api.countapi.xyz/get/zhang-group-itp-dft/homepage-visits&query=value&label=Visitors&color=003366"/>
     </p>
 </footer>
-
-<script>
-const namespace = "zhang-group-itp-dft";
-const key = "homepage-visits";
-
-fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`, {
-    cache: "no-store"
-})
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("counter").innerText = data.value;
-  })
-  .catch(err => {
-    console.error(err);
-    document.getElementById("counter").innerText = "999"; // 不要用 N/A
-  });
-</script>
 
 <!-- ================= SLIDER JS ================= -->
 <script>
