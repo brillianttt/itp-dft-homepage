@@ -92,9 +92,9 @@
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getDatabase, ref, get, set, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-// 🔥 改成你的 config
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyCgiCiyaDtdBIwaA-2-tNTFTRt6l56_tgw",
   authDomain: "zhang-group-visitor.firebaseapp.com",
@@ -102,44 +102,28 @@ const firebaseConfig = {
   projectId: "zhang-group-visitor",
   storageBucket: "zhang-group-visitor.firebasestorage.app",
   messagingSenderId: "509505890732",
-  appId: "1:509505890732:web:c3009a1a05026634293209",
-  measurementId: "G-H4J5DX402Z"
+  appId: "1:509505890732:web:c3009a1a05026634293209"
 };
 
-   
-import { runTransaction } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+// ✅ 1. 初始化
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
+// ✅ 2. 引用
+const counterRef = ref(db, "visits");
+
+// ✅ 3. 原子计数（推荐）
 runTransaction(counterRef, (current) => {
     return (current || 0) + 1;
 }).then(result => {
     document.getElementById("counter").innerText = result.snapshot.val();
-});
-
-            
-
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-
-const counterRef = ref(db, "visits");
-
-get(counterRef).then(snapshot => {
-    let count = snapshot.val();
-
-    if (count === null) {
-        set(counterRef, 1);
-        document.getElementById("counter").innerText = 1;
-    } else {
-        const newCount = count + 1;
-        set(counterRef, newCount);   // ✅ 正确
-        document.getElementById("counter").innerText = newCount;
-    }
 }).catch(err => {
     console.error(err);
+    document.getElementById("counter").innerText = "Error";
 });
-
-    
 </script>
 
+    
 <!-- ================= SLIDER JS ================= -->
 <script>
 window.onload = function () {
